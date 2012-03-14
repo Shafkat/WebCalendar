@@ -61,21 +61,14 @@ h2
 	position: relative;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-left: 41%;
 	font-size: 2em;
 	width: 250px;
 	text-align: center;
 }
 
-#year
-{
-	margin-left: 47%;
-}
-
 #today
 {
 	position: relative;
-	margin-left: 46%;
 	font-size: 0.5em;
 	margin-bottom: 10px;
 }
@@ -83,5 +76,5 @@ h2
 #mainCal
 {
 	top: 0px;
-	margin-left: 2.5%;
+	margin-left: 6%;
 }

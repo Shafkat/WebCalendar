@@ -1,5 +1,26 @@
+$(document).ready(function(){
+						   
+ $(window).resize(function(){
+
+  $('.center').css({
+   position:'absolute',
+   left: ($(window).width() 
+     - $('.center').outerWidth())/2,
+   top: ($(window).height() 
+     - $('.center').outerHeight())/2
+  });
+		
+ });
+ 
+ // To initially run the function:
+ $(window).resize();
+
+});
+
+
 var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 var week = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var weekShort = ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun'];
 
 head.js("https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js","./javascript/ui.js","./javascript/touch.js", function (){
 $('.touchBox').draggable({revert:true});
@@ -28,6 +49,7 @@ function loadEverything()
 	
 	$('#today').text( week[date.getDay()]  + ', ' + date.getDate());
 	
+	loadDays();
 	loadCalendar(daysInMonth(date.getFullYear(), date.getMonth()));
 	
 	afterEverything();
@@ -37,6 +59,21 @@ function loadEverything()
 function daysInMonth(iMonth, iYear)
 {
 	return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+function loadDays()
+{
+	var mainBox = document.getElementById('mainCal');
+	
+	for(var i = 0; i < weekShort.length; i++)
+	{
+		var box = document.createElement('div');
+		
+		$(box).text( weekShort[i] );
+		$(box).css( 'float', 'left' );
+		
+		mainBox.appendChild(box);
+	}
 }
 
 function loadCalendar(numberOfDays)
@@ -51,19 +88,22 @@ function loadCalendar(numberOfDays)
 		$(box).attr('class','touchBox');
 		$(innerBox).text(i+1);
 		$(innerBox).css('position','relative');
-		$(innerBox).css('top','35%');
+		$(innerBox).css('top','32%');
 		$(innerBox).css('font-size','2em');
 		
 		if( i+1 == date.getDate())
 		{
 			$(innerBox).css('font-weight','bold');
 			$(innerBox).css('font-size','3em');
-			$(innerBox).css('top','28%');
+			$(innerBox).css('top','23%');
 		}
 		
 		mainBox.appendChild(box);
 		box.appendChild(innerBox);
 	}
+	
+			$('.touchBox').css('width', this.screen.width/8);
+		$('.touchBox').css('height', this.screen.height*0.75/5);
 	
 	head.js("https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js","./javascript/ui.js","./javascript/touch.js", function (){
 	$('.touchBox').draggable({revert:true});
