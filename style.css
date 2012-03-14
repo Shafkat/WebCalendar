@@ -36,7 +36,6 @@ h2
 	border-radius:10px;
 	text-align: center;
 	
-	cursor: move;
 	position:relative;
 	z-index:50;
 }
