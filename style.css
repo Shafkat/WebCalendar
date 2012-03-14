@@ -1,0 +1,46 @@
+h1, body
+{
+	font-family: 'Open Sans', sans-serif;
+	color: #2AB0E8;
+	font-size: 2.5em;
+}
+
+h1
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	left: 100;
+	
+}
+
+h2
+{
+	font-size: 2em;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#left
+{
+	left: 15%;
+	font-size: 2em;
+	text-align: left;
+	width: 250px;
+}
+
+#right
+{
+	right: 15%;
+	font-size: 2em;
+	text-align: right;
+	width: 250px;
+}
+
+#monthName
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 39%;
+	font-size: 2.5em;
+	width: 250px;
+}
