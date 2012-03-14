@@ -20,6 +20,27 @@ h2
 	margin-top: 0px;
 }
 
+.touchBox {
+	float: left;
+	width: 125px;
+	height:125px;
+	margin: 1px; 
+	background-color:#2AB0E8;
+	font-weight: normal;
+	font-size: 14px;
+	color: white;
+	opacity: .75;
+	filter: alpha(opacity = 75);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius:10px;
+	text-align: center;
+	
+	cursor: move;
+	position:relative;
+	z-index:50;
+}
+
 #left
 {
 	left: 15%;
@@ -38,9 +59,30 @@ h2
 
 #monthName
 {
+	position: relative;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-left: 39%;
-	font-size: 2.5em;
+	margin-left: 41%;
+	font-size: 2em;
 	width: 250px;
+	text-align: center;
+}
+
+#year
+{
+	margin-left: 47%;
+}
+
+#today
+{
+	position: relative;
+	margin-left: 46%;
+	font-size: 0.5em;
+	margin-bottom: 10px;
+}
+
+#mainCal
+{
+	top: 0px;
+	margin-left: 2.5%;
 }
