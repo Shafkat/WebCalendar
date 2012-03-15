@@ -40,6 +40,12 @@ h2
 	z-index:50;
 }
 
+.daysOfMonth
+{
+	margin-left: 7%;
+	text-align: center;
+}
+
 #left
 {
 	left: 15%;
@@ -61,7 +67,7 @@ h2
 	position: relative;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-size: 2em;
+	font-size: 1.5em;
 	width: 250px;
 	text-align: center;
 }

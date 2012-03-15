@@ -63,16 +63,20 @@ function daysInMonth(iMonth, iYear)
 
 function loadDays()
 {
-	var mainBox = document.getElementById('mainCal');
+	var mainBox = document.getElementById('days');
+	var row = document.createElement('tr');
+
+	mainBox.appendChild(row);
 	
 	for(var i = 0; i < weekShort.length; i++)
 	{
-		var box = document.createElement('div');
+		var box = document.createElement('td');
 		
 		$(box).text( weekShort[i] );
-		$(box).css( 'float', 'left' );
+		$(box).css( 'margin-left', '7%' );
+		$(box).css( 'width', this.screen.width/9 );
 		
-		mainBox.appendChild(box);
+		row.appendChild(box);
 	}
 }
 
