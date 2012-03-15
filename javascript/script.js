@@ -38,9 +38,6 @@ $('.touchBox').draggable({revert:true});
 	});
 });
 
-
-function loadCal()
-
 	var date;
 
 function loadEverything()
@@ -122,12 +119,6 @@ function afterEverything()
 	$('.touchBox').attr('ontouchstart','$(this).css("opacity","1");');
 	$('.touchBox').attr('ontouchstart','$(this).css("background-color","#000000");');	
 	
-}
-
-function calculateDate()
-{
-	
-}
 
 	$('.touchBox').attr('ontouchend','$(this).css("opacity","0.75");');
 	$('.touchBox').attr('ontouchend','$(this).css("background-color","#2AB0E8");');
